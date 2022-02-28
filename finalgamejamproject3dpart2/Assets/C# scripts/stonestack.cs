@@ -89,7 +89,6 @@ public class stonestack : MonoBehaviour
     }
     void OnTriggerEnter(Collider target)
     {
-        
         if (target.gameObject.tag == "GameOver")
         {
             Debug.Log("GameOver");

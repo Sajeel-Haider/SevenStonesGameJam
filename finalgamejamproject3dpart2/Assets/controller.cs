@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class controller : MonoBehaviour
 {
@@ -247,6 +247,7 @@ public class controller : MonoBehaviour
             }
             else
             {
+               
                 Debug.Log("Time has run out!");
                 rb.velocity = Vector3.zero;
                 rb.isKinematic = true;
@@ -254,6 +255,7 @@ public class controller : MonoBehaviour
                 transform.position = orignalpos;
                 timeRemaining = 0.1f;
             }
+            SceneManager.LoadScene("stack", LoadSceneMode.Single);
         }
 
 
